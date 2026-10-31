@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_home">Start</string>
+    <string name="nav_diary">Tagebuch</string>
+    <string name="nav_progress">Verlauf</string>
+    <string name="nav_knowledge">Wissen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="back">Zurück</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="delete">Löschen</string>
+    <string name="close">Schließen</string>
+    <string name="next">Weiter</string>
+
+    <!-- Einrichtung -->
+    <string name="setup_welcome_title">Willkommen bei Pendia</string>
+    <string name="setup_welcome_text">Dein Tagebuch für GLP-1-Spritzen. Für Menschen mit Typ-2-Diabetes und für Menschen mit Übergewicht.</string>
+    <string name="setup_points">• Kein Konto, keine Cloud: Deine Daten bleiben auf deinem Handy.\n• Kostenlos, ohne Werbung.\n• Deutsch und Englisch.</string>
+    <string name="disclaimer_title">Wichtig</string>
+    <string name="disclaimer_text">Pendia ist ein Tagebuch und kein Medizinprodukt. Die App berechnet keine Dosis und ersetzt keine ärztliche Beratung. Halte dich an deine Praxis und an die Packungsbeilage.</string>
+    <string name="disclaimer_accept">Ich habe das gelesen und verstanden</string>
+    <string name="setup_med_title">Welches Medikament nutzt du?</string>
+    <string name="med_other">Anderes Medikament</string>
+    <string name="med_trademarks">Ozempic®, Wegovy®, Mounjaro®, Trulicity®, Saxenda®, Victoza® sind Marken der jeweiligen Inhaber. Pendia ist unabhängig.</string>
+    <string name="med_other_name">Name des Medikaments</string>
+    <string name="interval_label">Wie oft spritzt du?</string>
+    <string name="interval_weekly">Einmal pro Woche</string>
+    <string name="interval_daily">Täglich</string>
+    <string name="setup_start_date">Erste Spritze am</string>
+    <string name="setup_start_hint">Du kannst auch ein Datum in der Vergangenheit wählen.</string>
+    <string name="setup_diabetes">Ich habe Diabetes</string>
+    <string name="setup_diabetes_hint">Dann kannst du auch Blutzucker und HbA1c eintragen.</string>
+    <string name="setup_reminder_title">Erinnerung</string>
+    <string name="reminder_enable">An meinen Spritztag erinnern</string>
+    <string name="reminder_day">Tag</string>
+    <string name="reminder_time">Uhrzeit</string>
+    <string name="setup_weight">Aktuelles Gewicht in kg (optional)</string>
+    <string name="setup_finish">Pendia starten</string>
+
+    <!-- Start -->
+    <string name="home_next">Nächste Spritze</string>
+    <string name="today">Heute</string>
+    <plurals name="in_days">
+        <item quantity="one">in %d Tag</item>
+        <item quantity="other">in %d Tagen</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">vor %d Tag</item>
+        <item quantity="other">vor %d Tagen</item>
+    </plurals>
+    <plurals name="overdue_days">
+        <item quantity="one">seit %d Tag fällig</item>
+        <item quantity="other">seit %d Tagen fällig</item>
+    </plurals>
+    <string name="home_no_injection">Noch keine Spritze eingetragen.</string>
+    <string name="home_last">Letzte Spritze</string>
+    <string name="home_weight">Gewicht</string>
+    <string name="home_weight_change">%1$s seit Start</string>
+    <string name="home_pen">Pen</string>
+    <plurals name="pen_open_days">
+        <item quantity="one">seit %d Tag offen</item>
+        <item quantity="other">seit %d Tagen offen</item>
+    </plurals>
+    <string name="pen_of_limit">Tag %1$d von %2$d (laut deiner Packungsbeilage)</string>
+    <string name="pen_over_limit">Die Zeit, die du aus der Packungsbeilage eingetragen hast, ist vorbei. Prüf die Packungsbeilage oder frag in der Apotheke.</string>
+    <string name="home_missed_hint">Spritze vergessen? Lies nach, was gilt</string>
+    <string name="home_sites_recent">Zuletzt genutzte Stellen</string>
+    <string name="home_current_med">Aktuelles Medikament</string>
+    <string name="home_disclaimer">Pendia ersetzt keine ärztliche Beratung.</string>
+    <string name="action_injection">Spritze eintragen</string>
+    <string name="action_weight">Gewicht</string>
+    <string name="action_side_effect">Beschwerde</string>
+    <string name="action_glucose">Blutzucker</string>
+
+    <!-- Einträge -->
+    <string name="entry_injection_title">Spritze eintragen</string>
+    <string name="entry_date">Datum</string>
+    <string name="entry_time">Uhrzeit</string>
+    <string name="entry_dose">Dosis (mg)</string>
+    <string name="entry_dose_custom">Andere Dosis in mg</string>
+    <string name="entry_site">Stelle</string>
+    <string name="entry_site_hint">Tipp auf einen Punkt. Orange Punkte zeigen deine letzten Stellen.</string>
+    <string name="entry_note">Notiz (optional)</string>
+    <string name="entry_weight_title">Gewicht eintragen</string>
+    <string name="entry_weight_kg">Gewicht (kg)</string>
+    <string name="entry_waist">Bauchumfang (cm, optional)</string>
+    <string name="entry_se_title">Beschwerde eintragen</string>
+    <string name="entry_se_type">Art</string>
+    <string name="entry_severity">Stärke</string>
+    <string name="severity_1">leicht</string>
+    <string name="severity_2">mittel</string>
+    <string name="severity_3">stark</string>
+    <string name="entry_glucose_title">Blutzucker eintragen</string>
+    <string name="glucose_fasting">Nüchtern</string>
+    <string name="glucose_other">Andere Messung</string>
+    <string name="glucose_hba1c">HbA1c</string>
+    <string name="glucose_value">Wert</string>
+    <string name="glucose_hypo">Ich hatte einen Unterzucker</string>
+    <string name="unit_mgdl">mg/dl</string>
+    <string name="unit_mmol">mmol/l</string>
+    <string name="unit_percent">%</string>
+    <string name="error_number">Gib eine Zahl ein, z. B. 82,5</string>
+    <string name="error_name">Gib einen Namen ein</string>
+    <string name="saved">Gespeichert</string>
+
+    <!-- Tagebuch -->
+    <string name="diary_empty_title">Noch keine Einträge</string>
+    <string name="diary_empty_text">Trag deine erste Spritze ein. Dann siehst du hier alles auf einen Blick.</string>
+    <string name="delete_confirm_title">Eintrag löschen?</string>
+    <string name="delete_confirm_text">„%1$s“ vom %2$s wird gelöscht. Das lässt sich nicht rückgängig machen.</string>
+    <string name="type_injection">Spritze</string>
+    <string name="type_weight">Gewicht</string>
+    <string name="type_side_effect">Beschwerde</string>
+    <string name="type_glucose">Blutzucker</string>
+    <string name="hypo_flag">Unterzucker</string>
+
+    <!-- Verlauf -->
+    <string name="progress_weight">Gewicht</string>
+    <string name="progress_weight_empty">Trag mindestens zwei Gewichte ein, dann erscheint hier die Kurve.</string>
+    <string name="progress_total">Insgesamt: %1$s</string>
+    <string name="progress_doses">Dosen</string>
+    <string name="progress_doses_empty">Hier erscheinen deine Dosen.</string>
+    <string name="progress_side_effects">Beschwerden der letzten 4 Wochen</string>
+    <string name="progress_none">Keine eingetragen</string>
+    <string name="progress_glucose">Blutzucker</string>
+    <string name="progress_hba1c_last">Letzter HbA1c: %1$s</string>
+    <string name="progress_hypos">Unterzucker in 4 Wochen: %1$d</string>
+
+    <!-- Wissen -->
+    <string name="knowledge_title">Wissen &amp; Tipps</string>
+    <string name="knowledge_asof">Stand: %1$s. Die Quellen stehen bei jedem Eintrag. Die Texte ersetzen nicht deine Packungsbeilage.</string>
+    <string name="sources">Quellen</string>
+
+    <!-- Einstellungen -->
+    <string name="settings_language">Sprache</string>
+    <string name="lang_system">Wie Systemsprache</string>
+    <string name="settings_reminder">Erinnerung</string>
+    <string name="settings_med">Medikament</string>
+    <string name="settings_change_med">Medikament wechseln</string>
+    <string name="settings_change_med_hint">Das bisherige Medikament bleibt im Verlauf gespeichert.</string>
+    <string name="settings_diabetes">Diabetes-Modus</string>
+    <string name="settings_glucose_unit">Einheit für Blutzucker</string>
+    <string name="settings_pen">Pen</string>
+    <string name="pen_opened">Pen geöffnet am</string>
+    <string name="pen_unrefrigerated">Ungekühlt seit</string>
+    <string name="pen_limit">Haltbar nach Anbruch (Tage, laut Packungsbeilage)</string>
+    <string name="pen_new">Heute neuen Pen begonnen</string>
+    <string name="pen_clear">Pen zurücksetzen</string>
+    <string name="not_set">nicht gesetzt</string>
+    <string name="settings_data">Deine Daten</string>
+    <string name="export_json">Daten exportieren (Sicherung)</string>
+    <string name="import_json">Daten importieren</string>
+    <string name="import_confirm_title">Daten ersetzen?</string>
+    <string name="import_confirm_text">Die Sicherung ersetzt alle Daten, die jetzt in Pendia sind.</string>
+    <string name="import_replace">Daten ersetzen</string>
+    <string name="import_failed">Die Datei ließ sich nicht lesen. Wähle eine Sicherung, die mit Pendia erstellt wurde.</string>
+    <string name="import_ok">Daten importiert</string>
+    <string name="export_ok">Sicherung gespeichert</string>
+    <string name="export_failed">Die Sicherung ließ sich nicht speichern. Versuch einen anderen Speicherort.</string>
+    <string name="report_pdf">Bericht für die Praxis (PDF)</string>
+    <string name="report_failed">Der Bericht ließ sich nicht erstellen. Versuch es bitte noch einmal.</string>
+    <string name="delete_all">Alle Daten löschen</string>
+    <string name="delete_all_confirm_title">Alle Daten löschen?</string>
+    <string name="delete_all_confirm_text">Alle Spritzen, Gewichte, Beschwerden und Einstellungen werden von diesem Handy gelöscht. Das lässt sich nicht rückgängig machen. Exportiere vorher eine Sicherung, wenn du die Daten behalten willst.</string>
+    <string name="delete_all_button">Alles löschen</string>
+    <string name="settings_about">Über Pendia</string>
+    <string name="privacy_title">Datenschutz</string>
+    <string name="privacy_text">Pendia speichert alles, was du eingibst, nur auf diesem Gerät. Es gibt keine Server, kein Konto, keine Auswertung und keine Werbung. Die App hat keine Internet-Berechtigung. Automatische Android-Cloud-Sicherungen sind für Pendia abgeschaltet. Deine Daten verlassen das Handy nur, wenn du selbst eine Sicherung oder einen Bericht exportierst und teilst.</string>
+    <string name="version">Version %1$s</string>
+
+    <!-- Benachrichtigungen -->
+    <string name="notif_channel">Erinnerungen</string>
+    <string name="notif_title">Spritztag</string>
+    <string name="notif_text">Heute ist dein Spritztag. Trag die Spritze danach in Pendia ein.</string>
+    <string name="notif_text_daily">Zeit für deine Spritze. Trag sie danach in Pendia ein.</string>
+    <string name="notif_denied">Ohne Erlaubnis für Benachrichtigungen kann Pendia dich nicht erinnern. Du kannst sie in den Android-Einstellungen erlauben.</string>
+
+    <!-- Bericht -->
+    <string name="report_title">Pendia-Bericht</string>
+    <string name="report_created">Erstellt am %1$s</string>
+    <string name="report_disclaimer">Eigene Angaben der Patientin oder des Patienten, erfasst mit der App Pendia. Nicht ärztlich geprüft.</string>
+    <string name="report_meds">Medikamente</string>
+    <string name="report_since">seit %1$s</string>
+    <string name="report_until">bis %1$s</string>
+    <string name="report_injections">Spritzen</string>
+    <string name="report_weights">Gewicht</string>
+    <string name="report_side_effects">Beschwerden</string>
+    <string name="report_glucose">Blutzucker / HbA1c</string>
+    <string name="report_none">keine Einträge</string>
+
+    <!-- Stellen -->
+    <string name="site_arm_left">Linker Oberarm</string>
+    <string name="site_arm_right">Rechter Oberarm</string>
+    <string name="site_belly_left_upper">Bauch links oben</string>
+    <string name="site_belly_right_upper">Bauch rechts oben</string>
+    <string name="site_belly_left_lower">Bauch links unten</string>
+    <string name="site_belly_right_lower">Bauch rechts unten</string>
+    <string name="site_thigh_left">Linker Oberschenkel</string>
+    <string name="site_thigh_right">Rechter Oberschenkel</string>
+
+    <!-- Beschwerden -->
+    <string name="se_nausea">Übelkeit</string>
+    <string name="se_vomiting">Erbrechen</string>
+    <string name="se_diarrhea">Durchfall</string>
+    <string name="se_constipation">Verstopfung</string>
+    <string name="se_heartburn">Sodbrennen</string>
+    <string name="se_bloating">Blähungen</string>
+    <string name="se_fatigue">Müdigkeit</string>
+    <string name="se_headache">Kopfschmerzen</string>
+    <string name="se_dizziness">Schwindel</string>
+    <string name="se_injection_site">Reaktion an der Einstichstelle</string>
+    <string name="se_hair_loss">Haarausfall</string>
+    <string name="se_other">Sonstiges</string>
+</resources>

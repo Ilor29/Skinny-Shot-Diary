@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Pendia</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_diary">Diary</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_knowledge">Knowledge</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="next">Next</string>
+
+    <!-- Setup -->
+    <string name="setup_welcome_title">Welcome to Pendia</string>
+    <string name="setup_welcome_text">Your diary for GLP-1 injections. For people with type 2 diabetes and for people with overweight.</string>
+    <string name="setup_points">• No account, no cloud: your data stays on your phone.\n• Free, no ads.\n• English and German.</string>
+    <string name="disclaimer_title">Important</string>
+    <string name="disclaimer_text">Pendia is a diary, not a medical device. It does not calculate doses and does not replace medical advice. Follow your doctor and the package leaflet.</string>
+    <string name="disclaimer_accept">I have read and understood this</string>
+    <string name="setup_med_title">Which medicine do you use?</string>
+    <string name="med_other">Other medicine</string>
+    <string name="med_trademarks">Ozempic®, Wegovy®, Mounjaro®, Trulicity®, Saxenda®, Victoza® are trademarks of their respective owners. Pendia is independent.</string>
+    <string name="med_other_name">Name of the medicine</string>
+    <string name="interval_label">How often do you inject?</string>
+    <string name="interval_weekly">Once a week</string>
+    <string name="interval_daily">Daily</string>
+    <string name="setup_start_date">First injection on</string>
+    <string name="setup_start_hint">You can pick a date in the past.</string>
+    <string name="setup_diabetes">I have diabetes</string>
+    <string name="setup_diabetes_hint">Then you can also log blood sugar and HbA1c.</string>
+    <string name="setup_reminder_title">Reminder</string>
+    <string name="reminder_enable">Remind me on my injection day</string>
+    <string name="reminder_day">Day</string>
+    <string name="reminder_time">Time</string>
+    <string name="setup_weight">Current weight in kg (optional)</string>
+    <string name="setup_finish">Start Pendia</string>
+
+    <!-- Home -->
+    <string name="home_next">Next injection</string>
+    <string name="today">Today</string>
+    <plurals name="in_days">
+        <item quantity="one">in %d day</item>
+        <item quantity="other">in %d days</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <plurals name="overdue_days">
+        <item quantity="one">due %d day ago</item>
+        <item quantity="other">due %d days ago</item>
+    </plurals>
+    <string name="home_no_injection">No injection logged yet.</string>
+    <string name="home_last">Last injection</string>
+    <string name="home_weight">Weight</string>
+    <string name="home_weight_change">%1$s since start</string>
+    <string name="home_pen">Pen</string>
+    <plurals name="pen_open_days">
+        <item quantity="one">open for %d day</item>
+        <item quantity="other">open for %d days</item>
+    </plurals>
+    <string name="pen_of_limit">Day %1$d of %2$d (your package leaflet)</string>
+    <string name="pen_over_limit">Past the time you entered from the package leaflet. Check the leaflet or ask your pharmacy.</string>
+    <string name="home_missed_hint">Missed a dose? Read what applies</string>
+    <string name="home_sites_recent">Recently used sites</string>
+    <string name="home_current_med">Current medicine</string>
+    <string name="home_disclaimer">Pendia does not replace medical advice.</string>
+    <string name="action_injection">Log injection</string>
+    <string name="action_weight">Weight</string>
+    <string name="action_side_effect">Symptom</string>
+    <string name="action_glucose">Blood sugar</string>
+
+    <!-- Entries -->
+    <string name="entry_injection_title">Log injection</string>
+    <string name="entry_date">Date</string>
+    <string name="entry_time">Time</string>
+    <string name="entry_dose">Dose (mg)</string>
+    <string name="entry_dose_custom">Other dose in mg</string>
+    <string name="entry_site">Injection site</string>
+    <string name="entry_site_hint">Tap a dot. Orange dots show your last sites.</string>
+    <string name="entry_note">Note (optional)</string>
+    <string name="entry_weight_title">Log weight</string>
+    <string name="entry_weight_kg">Weight (kg)</string>
+    <string name="entry_waist">Waist (cm, optional)</string>
+    <string name="entry_se_title">Log symptom</string>
+    <string name="entry_se_type">Type</string>
+    <string name="entry_severity">Strength</string>
+    <string name="severity_1">mild</string>
+    <string name="severity_2">moderate</string>
+    <string name="severity_3">strong</string>
+    <string name="entry_glucose_title">Log blood sugar</string>
+    <string name="glucose_fasting">Fasting</string>
+    <string name="glucose_other">Other reading</string>
+    <string name="glucose_hba1c">HbA1c</string>
+    <string name="glucose_value">Value</string>
+    <string name="glucose_hypo">I had low blood sugar</string>
+    <string name="unit_mgdl">mg/dL</string>
+    <string name="unit_mmol">mmol/L</string>
+    <string name="unit_percent">%</string>
+    <string name="error_number">Enter a number, e.g. 82.5</string>
+    <string name="error_name">Enter a name</string>
+    <string name="saved">Saved</string>
+
+    <!-- Diary -->
+    <string name="diary_empty_title">No entries yet</string>
+    <string name="diary_empty_text">Log your first injection and everything shows up here at a glance.</string>
+    <string name="delete_confirm_title">Delete entry?</string>
+    <string name="delete_confirm_text">“%1$s” from %2$s will be deleted. This cannot be undone.</string>
+    <string name="type_injection">Injection</string>
+    <string name="type_weight">Weight</string>
+    <string name="type_side_effect">Symptom</string>
+    <string name="type_glucose">Blood sugar</string>
+    <string name="hypo_flag">low blood sugar</string>
+
+    <!-- Progress -->
+    <string name="progress_weight">Weight</string>
+    <string name="progress_weight_empty">Log at least two weights to see the curve.</string>
+    <string name="progress_total">Total: %1$s</string>
+    <string name="progress_doses">Doses</string>
+    <string name="progress_doses_empty">Your doses will appear here.</string>
+    <string name="progress_side_effects">Symptoms in the last 4 weeks</string>
+    <string name="progress_none">None logged</string>
+    <string name="progress_glucose">Blood sugar</string>
+    <string name="progress_hba1c_last">Latest HbA1c: %1$s</string>
+    <string name="progress_hypos">Low blood sugar episodes (4 weeks): %1$d</string>
+
+    <!-- Knowledge -->
+    <string name="knowledge_title">Knowledge &amp; tips</string>
+    <string name="knowledge_asof">As of %1$s. Sources are listed with each entry. These texts do not replace your package leaflet.</string>
+    <string name="sources">Sources</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Language</string>
+    <string name="lang_system">System language</string>
+    <string name="lang_de" translatable="false">Deutsch</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="settings_reminder">Reminder</string>
+    <string name="settings_med">Medicine</string>
+    <string name="settings_change_med">Switch medicine</string>
+    <string name="settings_change_med_hint">Your previous medicine stays in your history.</string>
+    <string name="settings_diabetes">Diabetes mode</string>
+    <string name="settings_glucose_unit">Blood sugar unit</string>
+    <string name="settings_pen">Pen</string>
+    <string name="pen_opened">Pen opened on</string>
+    <string name="pen_unrefrigerated">Out of the fridge since</string>
+    <string name="pen_limit">Use within (days, from your package leaflet)</string>
+    <string name="pen_new">Started a new pen today</string>
+    <string name="pen_clear">Reset pen</string>
+    <string name="not_set">not set</string>
+    <string name="settings_data">Your data</string>
+    <string name="export_json">Export data (backup)</string>
+    <string name="import_json">Import data</string>
+    <string name="import_confirm_title">Replace your data?</string>
+    <string name="import_confirm_text">The backup will replace all data currently in Pendia.</string>
+    <string name="import_replace">Replace data</string>
+    <string name="import_failed">This file could not be read. Pick a backup created with Pendia.</string>
+    <string name="import_ok">Data imported</string>
+    <string name="export_ok">Backup saved</string>
+    <string name="export_failed">The backup could not be saved. Try another location.</string>
+    <string name="report_pdf">Report for your doctor (PDF)</string>
+    <string name="report_failed">The report could not be created. Please try again.</string>
+    <string name="delete_all">Delete all data</string>
+    <string name="delete_all_confirm_title">Delete all data?</string>
+    <string name="delete_all_confirm_text">All injections, weights, symptoms and settings will be removed from this phone. This cannot be undone. Export a backup first if you want to keep your data.</string>
+    <string name="delete_all_button">Delete everything</string>
+    <string name="settings_about">About Pendia</string>
+    <string name="privacy_title">Privacy</string>
+    <string name="privacy_text">Pendia stores everything you enter on this device only. There are no servers, no account, no analytics and no ads. The app has no internet permission. Automatic Android cloud backups are switched off for Pendia. Your data only leaves the phone if you export and share a backup or report yourself.</string>
+    <string name="version">Version %1$s</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel">Reminders</string>
+    <string name="notif_title">Injection day</string>
+    <string name="notif_text">Today is your injection day. Remember to log it in Pendia.</string>
+    <string name="notif_text_daily">Time for your injection. Remember to log it in Pendia.</string>
+    <string name="notif_denied">Without notification permission Pendia cannot remind you. You can allow it in the Android settings.</string>
+
+    <!-- Report -->
+    <string name="report_title">Pendia report</string>
+    <string name="report_created">Created on %1$s</string>
+    <string name="report_disclaimer">Self-reported by the patient with the Pendia app. Not checked by a medical professional.</string>
+    <string name="report_meds">Medicines</string>
+    <string name="report_since">since %1$s</string>
+    <string name="report_until">until %1$s</string>
+    <string name="report_injections">Injections</string>
+    <string name="report_weights">Weight</string>
+    <string name="report_side_effects">Symptoms</string>
+    <string name="report_glucose">Blood sugar / HbA1c</string>
+    <string name="report_none">no entries</string>
+
+    <!-- Sites -->
+    <string name="site_arm_left">Left upper arm</string>
+    <string name="site_arm_right">Right upper arm</string>
+    <string name="site_belly_left_upper">Belly, left upper</string>
+    <string name="site_belly_right_upper">Belly, right upper</string>
+    <string name="site_belly_left_lower">Belly, left lower</string>
+    <string name="site_belly_right_lower">Belly, right lower</string>
+    <string name="site_thigh_left">Left thigh</string>
+    <string name="site_thigh_right">Right thigh</string>
+
+    <!-- Side effects -->
+    <string name="se_nausea">Nausea</string>
+    <string name="se_vomiting">Vomiting</string>
+    <string name="se_diarrhea">Diarrhoea</string>
+    <string name="se_constipation">Constipation</string>
+    <string name="se_heartburn">Heartburn</string>
+    <string name="se_bloating">Bloating</string>
+    <string name="se_fatigue">Tiredness</string>
+    <string name="se_headache">Headache</string>
+    <string name="se_dizziness">Dizziness</string>
+    <string name="se_injection_site">Injection site reaction</string>
+    <string name="se_hair_loss">Hair loss</string>
+    <string name="se_other">Other</string>
+</resources>
