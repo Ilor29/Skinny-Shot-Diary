@@ -13,14 +13,19 @@ android {
         applicationId = "app.pendia"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.1.1"
     }
 
     // Signatur für den Play Store. Die Werte kommen aus Umgebungsvariablen
     // (GitHub-Secrets), nie aus dem Repository. Fehlen sie, bleibt der Release unsigniert.
     val keystorePath = System.getenv("PENDIA_KEYSTORE_FILE")
     signingConfigs {
+        // Fester Test-Schlüssel, damit Test-APKs von GitHub und lokal sich gegenseitig
+        // aktualisieren können. Nur für Debug, nie für den Play Store.
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+        }
         if (keystorePath != null) {
             create("release") {
                 storeFile = file(keystorePath)
