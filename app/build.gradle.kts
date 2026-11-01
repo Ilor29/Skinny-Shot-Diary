@@ -13,8 +13,8 @@ android {
         applicationId = "app.pendia"
         minSdk = 26
         targetSdk = 35
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 3
+        versionName = "0.2.0"
     }
 
     // Signatur für den Play Store. Die Werte kommen aus Umgebungsvariablen

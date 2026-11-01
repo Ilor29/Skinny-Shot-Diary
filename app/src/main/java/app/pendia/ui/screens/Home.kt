@@ -61,8 +61,12 @@ fun HomeScreen(data: AppData, pad: PaddingValues, open: (String) -> Unit) {
     ) {
         item {
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer), modifier = Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text(stringResource(R.string.home_next), style = MaterialTheme.typography.labelLarge)
+                Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(
+                        stringResource(R.string.home_next).uppercase(loc),
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f),
+                    )
                     if (med != null) {
                         val lastForMed = sortedInj.firstOrNull { it.medicationId == med.id }
                         if (lastForMed == null) {
@@ -75,7 +79,7 @@ fun HomeScreen(data: AppData, pad: PaddingValues, open: (String) -> Unit) {
                                 days > 0 -> pluralStringResource(R.plurals.in_days, days, days)
                                 else -> pluralStringResource(R.plurals.overdue_days, -days, -days)
                             }
-                            Text(rel, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.SemiBold)
+                            Text(rel, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
                             Text(Fmt.date(next, loc), style = MaterialTheme.typography.bodyMedium)
                             if (days < 0) {
                                 TextButton(onClick = { open("faq:missed_dose") }, contentPadding = PaddingValues(0.dp)) {
@@ -101,6 +105,24 @@ fun HomeScreen(data: AppData, pad: PaddingValues, open: (String) -> Unit) {
             }
         }
 
+        val weights = data.weights.sortedBy { it.date }
+        val lastDose = med?.let { m -> sortedInj.firstOrNull { it.medicationId == m.id }?.doseMg }
+        if (weights.isNotEmpty() || lastDose != null) {
+            item {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    val wText = weights.lastOrNull()?.let { Fmt.num(it.kg, loc, 1) + " kg" } ?: "–"
+                    val wSub = if (weights.size > 1) {
+                        val diff = weights.last().kg - weights.first().kg
+                        stringResource(R.string.home_weight_change, (if (diff > 0) "+" else "") + Fmt.num(diff, loc, 1) + " kg")
+                    } else ""
+                    StatTile(stringResource(R.string.home_weight), wText, wSub, Modifier.weight(1f)) { open("weight") }
+                    val dText = lastDose?.let { Fmt.num(it, loc) + " mg" } ?: "–"
+                    val dSub = med?.let { Catalog.shortName(it, stringResource(R.string.med_other)) } ?: ""
+                    StatTile(stringResource(R.string.home_dose), dText, dSub, Modifier.weight(1f)) { open("injection") }
+                }
+            }
+        }
+
         if (last != null) {
             item {
                 SectionCard(stringResource(R.string.home_last)) {
@@ -113,28 +135,12 @@ fun HomeScreen(data: AppData, pad: PaddingValues, open: (String) -> Unit) {
                                 if (ago == 0) stringResource(R.string.today) else pluralStringResource(R.plurals.days_ago, ago, ago),
                                 style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
-                            last.doseMg?.let { Text(Fmt.num(it, loc) + " mg", style = MaterialTheme.typography.bodyLarge) }
                             Site.of(last.site)?.let { Text(stringResource(it.label), style = MaterialTheme.typography.bodyMedium) }
                         }
                         val recent = sortedInj.mapNotNull { Site.of(it.site) }.distinct().take(4)
                         if (recent.isNotEmpty()) {
                             BodyMap(selected = null, recent = recent, modifier = Modifier.width(96.dp), description = stringResource(R.string.home_sites_recent))
                         }
-                    }
-                }
-            }
-        }
-
-        val weights = data.weights.sortedBy { it.date }
-        if (weights.isNotEmpty()) {
-            item {
-                SectionCard(stringResource(R.string.home_weight)) {
-                    val cur = weights.last()
-                    Text(Fmt.num(cur.kg, loc, 1) + " kg", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.SemiBold)
-                    if (weights.size > 1) {
-                        val diff = cur.kg - weights.first().kg
-                        val sign = if (diff > 0) "+" else ""
-                        Text(stringResource(R.string.home_weight_change, sign + Fmt.num(diff, loc, 1) + " kg"), style = MaterialTheme.typography.bodyMedium)
                     }
                 }
             }
@@ -172,6 +178,21 @@ fun HomeScreen(data: AppData, pad: PaddingValues, open: (String) -> Unit) {
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(top = 4.dp),
             )
+        }
+    }
+}
+
+@Composable
+private fun StatTile(title: String, value: String, sub: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Card(
+        onClick = onClick,
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer),
+        modifier = modifier,
+    ) {
+        Column(Modifier.padding(16.dp)) {
+            Text(title.uppercase(locale()), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(value, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 8.dp))
+            if (sub.isNotBlank()) Text(sub, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
         }
     }
 }

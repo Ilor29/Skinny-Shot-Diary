@@ -206,10 +206,10 @@ class MockupTest {
     fun vorschlagDunkel() = render("02_vorschlag_dunkel", { HealthAppTheme(true) { HealthDashboardScreen() } })
 
     @Test
-    fun pendiaMitSalbei() = render("03_pendia_salbei_hell", { HealthAppTheme(false) { PendiaRoot(app().repo) } }) { seed() }
+    fun pendiaMitSalbei() = render("03_pendia_v2_hell", { app.pendia.ui.theme.PendiaTheme(false) { PendiaRoot(app().repo) } }) { seed() }
 
     @Test
-    fun pendiaMitSalbeiDunkel() = render("04_pendia_salbei_dunkel", { HealthAppTheme(true) { PendiaRoot(app().repo) } }) { seed() }
+    fun pendiaMitSalbeiDunkel() = render("04_pendia_v2_dunkel", { app.pendia.ui.theme.PendiaTheme(true) { PendiaRoot(app().repo) } }) { seed() }
 
     private fun app() = org.robolectric.RuntimeEnvironment.getApplication()
 

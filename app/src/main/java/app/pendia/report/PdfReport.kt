@@ -40,8 +40,8 @@ object PdfReport {
             this.color = color
             typeface = if (bold) Typeface.DEFAULT_BOLD else Typeface.DEFAULT
         }
-        val title = paint(20f, true, 0xFF0F5E63.toInt())
-        val h2 = paint(13f, true, 0xFF0F5E63.toInt())
+        val title = paint(20f, true, 0xFF2D6A4F.toInt())
+        val h2 = paint(13f, true, 0xFF2D6A4F.toInt())
         val body = paint(9.5f)
         val head = paint(9.5f, true)
         val small = paint(8f, color = 0xFF5F6B6B.toInt())

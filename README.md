@@ -8,6 +8,7 @@ Android-App (APK) für Menschen, die eine GLP-1-Spritze nutzen (Typ-2-Diabetes o
 - [Icon-Entwürfe](docs/icon/)
 - [Signierte Version bauen v1](docs/release_anleitung_v1.md)
 - [Datenschutzerklärung, Entwurf v1](docs/datenschutz_v1.md)
+- [Design v1 (Salbei)](docs/design_v1.md)
 
 ## APK holen
 

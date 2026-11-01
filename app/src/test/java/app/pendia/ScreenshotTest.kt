@@ -92,7 +92,7 @@ class ScreenshotTest {
         shot("03_einrichtung_3")
         rule.onNodeWithText("Pendia starten").performClick()
         rule.waitForIdle()
-        rule.onNodeWithText("Nächste Spritze").assertExists()
+        rule.onNodeWithText("NÄCHSTE SPRITZE").assertExists()
         shot("04_start_leer")
     }
 

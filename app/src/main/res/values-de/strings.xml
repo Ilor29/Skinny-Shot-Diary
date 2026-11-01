@@ -56,6 +56,7 @@
     <string name="home_last">Letzte Spritze</string>
     <string name="home_weight">Gewicht</string>
     <string name="home_weight_change">%1$s seit Start</string>
+    <string name="home_dose">Aktuelle Dosis</string>
     <string name="home_pen">Pen</string>
     <plurals name="pen_open_days">
         <item quantity="one">seit %d Tag offen</item>

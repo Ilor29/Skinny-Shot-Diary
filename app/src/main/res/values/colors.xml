@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pendia_teal">#0F5E63</color>
+    <color name="pendia_sage">#2D6A4F</color>
     <color name="pendia_cream">#F4F1EA</color>
     <color name="pendia_coral">#F07B62</color>
-    <color name="window_bg">#F7F8F7</color>
+    <color name="window_bg">#F8F9FA</color>
 </resources>
