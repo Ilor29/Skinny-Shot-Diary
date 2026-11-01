@@ -17,9 +17,24 @@ android {
         versionName = "0.1.0"
     }
 
+    // Signatur für den Play Store. Die Werte kommen aus Umgebungsvariablen
+    // (GitHub-Secrets), nie aus dem Repository. Fehlen sie, bleibt der Release unsigniert.
+    val keystorePath = System.getenv("PENDIA_KEYSTORE_FILE")
+    signingConfigs {
+        if (keystorePath != null) {
+            create("release") {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("PENDIA_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("PENDIA_KEY_ALIAS")
+                keyPassword = System.getenv("PENDIA_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (keystorePath != null) signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

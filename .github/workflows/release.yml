@@ -1,0 +1,45 @@
+name: Release bauen (signiert)
+
+# Startet von Hand (Actions → „Release bauen“ → Run workflow)
+# oder wenn ein Tag wie v0.2.0 gepusht wird.
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Schlüssel aus Secret holen
+        env:
+          KEYSTORE_BASE64: ${{ secrets.PENDIA_KEYSTORE_BASE64 }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::error::Secret PENDIA_KEYSTORE_BASE64 fehlt. Anleitung: docs/release_anleitung_v1.md"
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/pendia.jks"
+          echo "PENDIA_KEYSTORE_FILE=$RUNNER_TEMP/pendia.jks" >> "$GITHUB_ENV"
+      - name: Signierte APK und AAB bauen
+        env:
+          PENDIA_KEYSTORE_PASSWORD: ${{ secrets.PENDIA_KEYSTORE_PASSWORD }}
+          PENDIA_KEY_ALIAS: ${{ secrets.PENDIA_KEY_ALIAS }}
+          PENDIA_KEY_PASSWORD: ${{ secrets.PENDIA_KEY_PASSWORD }}
+        run: ./gradlew assembleRelease bundleRelease --no-daemon --stacktrace
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pendia-release
+          path: |
+            app/build/outputs/apk/release/*.apk
+            app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+      - name: Schlüsseldatei löschen
+        if: always()
+        run: rm -f "$RUNNER_TEMP/pendia.jks"

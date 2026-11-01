@@ -6,6 +6,8 @@ Android-App (APK) für Menschen, die eine GLP-1-Spritze nutzen (Typ-2-Diabetes o
 - [Konzept v2](docs/konzept_v2.md) (aktuell), [v1](docs/konzept_v1.md)
 - [Screenshots](docs/screenshots/)
 - [Icon-Entwürfe](docs/icon/)
+- [Signierte Version bauen v1](docs/release_anleitung_v1.md)
+- [Datenschutzerklärung, Entwurf v1](docs/datenschutz_v1.md)
 
 ## APK holen
 
@@ -13,7 +15,9 @@ Android-App (APK) für Menschen, die eine GLP-1-Spritze nutzen (Typ-2-Diabetes o
 2. Unten unter **Artifacts** `pendia-apk` herunterladen und entpacken
 3. `pendia-debug.apk` aufs Handy kopieren und öffnen („Installation aus unbekannten Quellen“ erlauben)
 
-Das ist eine Test-APK. Für den Play Store braucht es später eine signierte Release-APK.
+Das ist eine Test-APK. Bei jedem Build laufen auch die Tests, die Screenshots liegen unter Artifacts als `pendia-screenshots`.
+
+Für den Play Store: Actions → „Release bauen (signiert)“. Vorher einmal den Schlüssel anlegen, siehe [Anleitung](docs/release_anleitung_v1.md).
 
 ## Lokal bauen
 
